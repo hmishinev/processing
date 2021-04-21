@@ -48,9 +48,8 @@ class Mover {
   }
 }
 
-Mover[] movers = new Mover[1];
+Mover[] movers = new Mover[10];
 PVector wind = new PVector(0.2, 0);
-PVector gravity = new PVector(0, 0.9);
 
 void setup() {
   size(640,360);
@@ -68,6 +67,7 @@ void draw() {
     }
 
     movers[i].checkEdges();
+    PVector gravity = new PVector(0, 0.1 * movers[i].mass);
     movers[i].applyForce(gravity);
     movers[i].update();
     movers[i].display();

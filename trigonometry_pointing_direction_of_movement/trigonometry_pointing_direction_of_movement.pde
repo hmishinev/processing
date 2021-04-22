@@ -19,7 +19,8 @@ class Mover {
   }
 
   void display() {
-    float angle = atan(velocity.y / velocity.x);
+    //float angle = atan(velocity.y / velocity.x);
+    float angle = velocity.heading();
 
     stroke(0);
     fill(175);

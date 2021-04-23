@@ -105,7 +105,7 @@ void draw() {
 }
 */
 
-/* Spiral random path */
+/* Spiral random path 
 float r = 150;
 float theta = 0;
 
@@ -132,3 +132,38 @@ void draw() {
     }
   endShape(CLOSE);
 }
+*/
+
+/* Asteroids 
+
+float r = 150;
+float theta = 0;
+
+void setup() {
+  size(640, 360);
+  background(0);
+}
+
+void draw() {
+  background(0);
+  stroke(255);
+  noFill();
+
+  translate(width / 2, height / 2);
+  stroke(252, 238, 33);
+  
+  //float increment = map(mouseX, 0, width, 0.01, PI);
+  float increment = 0.1;
+  noLoop();
+
+  beginShape();
+    for(float angle = 0; angle < TWO_PI; angle += increment) {
+      float r1 = r + random(-50, 10);
+      float x = r1 * cos(angle);
+      float y = r1 * sin(angle);
+      vertex(x, y);
+    }
+  endShape(CLOSE);
+}
+
+*/

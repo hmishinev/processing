@@ -33,8 +33,8 @@ class Mover {
  
   void update() {
  
-    PVector mouse = new PVector(mouseX,mouseY);
-    PVector dir = PVector.sub(mouse,location);
+    PVector mouse = new PVector(mouseX, mouseY);
+    PVector dir = PVector.sub(mouse, location);
     dir.normalize();
     dir.mult(0.5);
     acceleration = dir;
@@ -47,7 +47,7 @@ class Mover {
   void display() {
     stroke(0);
     fill(175);
-    ellipse(location.x,location.y,16,16);
+    ellipse(location.x, location.y, 16, 16);
   }
  
   void checkEdges() {
